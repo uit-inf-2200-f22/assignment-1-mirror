@@ -35,17 +35,17 @@ You should use the pre-code in GitHub as a starting point. We will provide you w
 3. A file named “abc001-def002-P1”
    1. Where abc001 and def002 are your UiT usernames
 
-The report should have the following sections
+The report should contain all necessary information for an expert to evaluate your design and implementation. You should assume that the expert has read the textbook and the assignment text. You do not need, and should not, repaeat the content in the textbook. It should have the following sections:
 1. Cover page: your names, emails, GitHub usernames, and your GitHub repository.
-1.	Introduction: description of your benchmark. Why did you choose this benchmark? What does it do? Where is it used?
-2.	Implementation: describe your assembly (and C) implementation of the microbenchmark. Do not include full code in report, but describe the most relevant or interesting aspects, such as expensive assembly instructions.
-3. Methodology, where you describe:
+2. Introduction: description of your benchmark. Why did you choose this benchmark? What does it do? Where is it used?
+3. Implementation: describe your assembly (and C) implementation of the microbenchmark. Do not include full code in report, but describe the most relevant or interesting aspects, such as expensive assembly instructions.
+4. Methodology, where you describe:
    1. How you measured hotspots
    2. The computer(s) you used for the experiments.
    3. How you measured the execution time for the benchmark, including the resolution of your timer. 
    4.	Experiment parameters such as input data content and size, number of iterations, number of repeated experiment executions, and so on.
-4. Results: where you estimate the best theoretical execution time for your benchmark on your computer, and then compare it to the assembly code execution time, and the reference C code execution time.
-5. Discussion: where you discuss your results and summarize lessons learned.
+5. Results: where you estimate the best theoretical execution time for your benchmark on your computer, and then compare it to the assembly code execution time, and the reference C code execution time.
+6. Discussion: where you discuss your results and summarize lessons learned.
 
 The code should:
 1. Compile without errors and warnings. 
