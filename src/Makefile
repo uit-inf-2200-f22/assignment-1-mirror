@@ -3,8 +3,14 @@
 # -m32 compiles .C to 32bit assembly (Needs package gcc-multilib)
 # -masm=att Compiles .C with at&t assembly systax
 
+# Makefile
+# 26.08.2022 (Fredrik Mørstad & Fredrik Fasteraune): 
+# Added docker sub-command
+
 CC = gcc
 CFLAGS = -m32 -masm=att
+DOCKER_COMPOSE=.docker/docker-compose.yml
+DOCKERFILE=.docker/Dockerfile
 
 all: program
 
@@ -17,6 +23,12 @@ main: main.c Makefile
 program: asm.S main
 	$(CC) $(CFLAGS) -E $< > $@_pp.s
 	$(CC) $(CFLAGS) main.s $@_pp.s -o $@
+
+docker: $(DOCKERFILE) $(DOCKER_COMPOSE)
+	docker compose -f $(DOCKER_COMPOSE) build
+	docker compose -f $(DOCKER_COMPOSE) up -d
+	docker exec -it assignment-1 bash
+	docker compose -f $(DOCKER_COMPOSE) down
 
 clean: 
 	rm -rf *.o program program_pp.s main.s
