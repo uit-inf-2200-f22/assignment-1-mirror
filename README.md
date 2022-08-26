@@ -21,6 +21,9 @@ In this first assignment you will compare your assembly coding skills against a 
 ## Design review
 The design review is mandatory. You will meet your TA for a 15-minute discussion. Before the meeting you should prepare an informal presentation where you describe your microbenchmark and input data. In addition, you should present your experiment methodology including how you plan to measure the execution time, and how you will setup the experiment (input data size, number of experiment repeated measurements, main loop iterations, etc).
 
+## Useful resources
+1. [Introduction to Assembly](Introduction_to_Assembly-2.pdf)
+
 ## Deliverables and report
 
 You should use the pre-code in GitHub as a starting point. We will provide you with a link to the assignment that will create a repository for your group. You will also hand in the report by committing it to your GitHub repository before the deadline. The final repository should contain:
