@@ -3,6 +3,7 @@
 version: "3.5"
 services:
   demo:
+    platform: linux/amd64
     container_name: assignment-1
     build:
       context: ../
