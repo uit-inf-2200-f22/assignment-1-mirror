@@ -27,8 +27,7 @@ program: asm.S main
 docker: $(DOCKERFILE) $(DOCKER_COMPOSE)
 	docker compose -f $(DOCKER_COMPOSE) build
 	docker compose -f $(DOCKER_COMPOSE) up -d
-	docker exec -it assignment-1 bash
-	docker compose -f $(DOCKER_COMPOSE) down
+	docker exec -it assignment-1 bash ; docker compose -f $(DOCKER_COMPOSE) down
 
 clean: 
 	rm -rf *.o program program_pp.s main.s
